@@ -25,7 +25,6 @@ const removeNote = (title) => {
     const notes = loadNotes()
     const uniqueNotes = notes.filter((note) => note.title !== title)
 
-
     if (uniqueNotes.length !== notes.length) {
         saveNotes(uniqueNotes)
         console.log(chalk.green("Note removed successfully.."));
